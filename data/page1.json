@@ -1,127 +1,55 @@
 {
   "orders": [
     {
-      "total_price": "179.04"
-    },
-    {
-      "total_price": "14.62"
-    },
-    {
-      "total_price": "492.78"
-    },
-    {
-      "total_price": "59.98"
-    },
-    {
-      "total_price": "356.16"
-    },
-    {
-      "total_price": "42.00"
-    },
-    {
-      "total_price": "30.00"
-    },
-    {
-      "total_price": "404.40"
-    },
-    {
-      "total_price": "6.15"
-    },
-    {
-      "total_price": "207.72"
-    },
-    {
-      "total_price": "7.31"
-    },
-    {
-      "total_price": "226.76"
-    },
-    {
-      "total_price": "208.88"
-    },
-    {
-      "total_price": "246.39"
-    },
-    {
-      "total_price": "299.90"
-    },
-    {
-      "total_price": "254.40"
-    },
-    {
-      "total_price": "18.00"
+      "total_price": "7.86"
     },
     {
       "total_price": "67.40"
     },
     {
-      "total_price": "8.73"
+      "total_price": "186.16"
     },
     {
-      "total_price": "13.20"
+      "total_price": "5.82"
     },
     {
-      "total_price": "2.05"
+      "total_price": "6.15"
     },
     {
       "total_price": "276.96"
     },
     {
+      "total_price": "56.69"
+    },
+    {
       "total_price": "14.62"
     },
     {
-      "total_price": "170.07"
-    },
-    {
-      "total_price": "239.92"
+      "total_price": "359.88"
     },
     {
       "total_price": "119.36"
     },
     {
-      "total_price": "82.13"
+      "total_price": "492.78"
     },
     {
-      "total_price": "203.52"
+      "total_price": "305.28"
     },
     {
-      "total_price": "12.00"
+      "total_price": "50.88"
     },
     {
-      "total_price": "337.00"
+      "total_price": "6.00"
     },
     {
-      "total_price": "14.55"
+      "total_price": "228.30"
     },
     {
-      "total_price": "8.20"
+      "total_price": "288.32"
     },
     {
-      "total_price": "207.72"
-    },
-    {
-      "total_price": "340.14"
-    },
-    {
-      "total_price": "14.62"
-    },
-    {
-      "total_price": "89.52"
-    },
-    {
-      "total_price": "119.96"
-    },
-    {
-      "total_price": "328.52"
-    },
-    {
-      "total_price": "356.16"
-    },
-    {
-      "total_price": "24.00"
-    },
-    {
-      "total_price": "12.00"
+      "total_price": "0.00"
     },
     {
       "total_price": "197.97"
@@ -130,25 +58,97 @@
       "total_price": "73.18"
     },
     {
-      "total_price": "303.64"
+      "total_price": "10.98"
     },
     {
-      "total_price": "496.80"
+      "total_price": "0.00"
     },
     {
-      "total_price": "65.88"
+      "total_price": "4.20"
     },
     {
-      "total_price": "243.12"
+      "total_price": "162.08"
     },
     {
-      "total_price": "2.10"
+      "total_price": "88.46"
     },
     {
-      "total_price": "221.15"
+      "total_price": "7.86"
+    },
+    {
+      "total_price": "139.62"
     },
     {
       "total_price": "342.68"
+    },
+    {
+      "total_price": "8.73"
+    },
+    {
+      "total_price": "67.40"
+    },
+    {
+      "total_price": "4.10"
+    },
+    {
+      "total_price": "138.48"
+    },
+    {
+      "total_price": "19.80"
+    },
+    {
+      "total_price": "56.69"
+    },
+    {
+      "total_price": "29.24"
+    },
+    {
+      "total_price": "119.36"
+    },
+    {
+      "total_price": "328.52"
+    },
+    {
+      "total_price": "119.96"
+    },
+    {
+      "total_price": "50.88"
+    },
+    {
+      "total_price": "0.00"
+    },
+    {
+      "total_price": "50.88"
+    },
+    {
+      "total_price": "246.39"
+    },
+    {
+      "total_price": "18.00"
+    },
+    {
+      "total_price": "2.62"
+    },
+    {
+      "total_price": "186.16"
+    },
+    {
+      "total_price": "0.00"
+    },
+    {
+      "total_price": "5.82"
+    },
+    {
+      "total_price": "0.00"
+    },
+    {
+      "total_price": "2.05"
+    },
+    {
+      "total_price": "207.72"
+    },
+    {
+      "total_price": "170.07"
     }
   ]
 }

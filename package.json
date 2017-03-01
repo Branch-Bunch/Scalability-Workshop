@@ -1,0 +1,29 @@
+{
+  "name": "scalability-workshop",
+  "version": "1.0.0",
+  "description": "Scalablility workshop, with Nodejs and MongoDB as the tech",
+  "main": "async.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kirinrastogi/Scalability-Workshop.git"
+  },
+  "keywords": [
+    "scale",
+    "nodejs",
+    "mongodb",
+    "mongoose",
+    "cuhacking"
+  ],
+  "author": "Kirin Rastogi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kirinrastogi/Scalability-Workshop/issues"
+  },
+  "homepage": "https://github.com/kirinrastogi/Scalability-Workshop#readme",
+  "dependencies": {
+    "fs-promise": "^2.0.0"
+  }
+}
