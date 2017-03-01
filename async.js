@@ -1,12 +1,13 @@
 'use strict'
-const fsp = require('fs-promise')
 const fs = require('fs')
 
 function readFilePromise(path) {
   return new Promise((resolve, reject) => {
-    fsp.readFile(path, { encoding: 'utf8' })
-      .then(resolve)
-      .catch(reject)
+    try {
+      fs.readFile(path, { encoding: 'utf8' }, resolve)
+    } catch(e) {
+      reject(e)
+    }
   })
 }
 
@@ -33,11 +34,11 @@ let arr = []
 for (let i = 0; i < 3; i++) {
   arr.push(readFilePromise(`./data/page${i}.json`))
 }
+const after = Date.now()
 
 Promise.all(arr)
   .then(contents => {
-    const after = Date.now()
     console.log(`async: ${after - before}`)
   })
-  .catch(err => console.log(err))
+  .catch(console.log)
 
