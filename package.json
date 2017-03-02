@@ -2,9 +2,10 @@
   "name": "scalability-workshop",
   "version": "1.0.0",
   "description": "Scalablility workshop, with Nodejs and MongoDB as the tech",
-  "main": "async.js",
+  "main": "atomic.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node atomic.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,5 @@
   },
   "homepage": "https://github.com/kirinrastogi/Scalability-Workshop#readme",
   "dependencies": {
-    "fs-promise": "^2.0.0"
   }
 }
