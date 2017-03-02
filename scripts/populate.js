@@ -35,5 +35,8 @@ for (let i = 0; i < 100; i++) {
   promiseArray[i] = populate()
 }
 Promise.all(promiseArray)
-  .then(console.log('populated'))
+  .then((data) => {
+    console.log('populated')
+    process.exit()
+  })
   .catch(console.log)
