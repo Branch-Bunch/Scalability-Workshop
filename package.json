@@ -4,8 +4,8 @@
   "description": "Scalablility workshop, with Nodejs and MongoDB as the tech",
   "main": "atomic.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node atomic.js"
+    "test": "node test/test.js",
+    "start": "node atomic/atomic.js"
   },
   "repository": {
     "type": "git",
