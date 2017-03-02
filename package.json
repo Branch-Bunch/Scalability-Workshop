@@ -25,5 +25,7 @@
   },
   "homepage": "https://github.com/kirinrastogi/Scalability-Workshop#readme",
   "dependencies": {
+    "dotenv": "^4.0.0",
+    "mongoose": "^4.8.5"
   }
 }
