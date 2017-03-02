@@ -7,6 +7,15 @@ What we'll be covering:
 3. [Pagination](#pagination)
 4. [Aggregation Pipelines](#aggregation-pipelines)
 
+### Setting up your environment
+See setup.md
+
+1. Download Nodejs, MongoDB
+2. Run mongod (running as root makes it easier)
+3. Git clone this repo
+4. ```npm run build```
+
+
 ### Atomic Database Actions
 
 - Lower the amount of requests made, and reduce waiting
