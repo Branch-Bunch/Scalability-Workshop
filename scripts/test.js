@@ -10,7 +10,7 @@ Sortable.create({ value: 1, score: -3})
   .then(created => Sortable.findOne(created))
   .then((response) => {
     console.log(response)
-    console.log('\n\nIt works!')
+    console.log('\n\nIt works!\nConnected successfully!')
     process.exit()
   })
   .catch(console.log)

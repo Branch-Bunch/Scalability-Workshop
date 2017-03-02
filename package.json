@@ -1,15 +1,16 @@
 {
   "name": "scalability-workshop",
   "version": "1.0.0",
-  "description": "Scalablility workshop, with Nodejs and MongoDB as the tech",
-  "main": "atomic.js",
+  "description": "Scaling Database Queries, with Nodejs and MongoDB as the tech",
+  "main": "example1/atomic.js",
   "scripts": {
-    "test": "node test/test.js",
-    "start": "node atomic/atomic.js"
+    "test": "node scripts/test.js",
+    "start": "node example1/atomic.js",
+    "build": "npm install && node scripts/populate.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kirinrastogi/Scalability-Workshop.git"
+    "url": "git+https://github.com/branch-bunch/Scalability-Workshop.git"
   },
   "keywords": [
     "scale",
