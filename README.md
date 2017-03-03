@@ -93,7 +93,7 @@ Make a video with them
 ```js
 function comparison(first, second) {
   // compare the anime episodes
-  // sort will order them all
+  // return 1 or -1 to get sort to order them
 }
 
 AnimeEpisodes.find({})
