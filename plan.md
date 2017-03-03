@@ -17,8 +17,9 @@ What we'll be covering:
 Sortable.findById(id)
   .then((object) => {
     object.property += 5
-    object.save()
+    return object.save()
   })
+  .then(doSomething)
 ```
 ```js
 Sortable.findByIdAndUpdate(
@@ -27,7 +28,13 @@ Sortable.findByIdAndUpdate(
   {
     new: true,
   })
+  .then(doSomething)
 ```
+
+The second snippet is better for several reasons.
+
+1. What happens when multiple people make a request?
+2. How many requests are made in each of them?
 
 ### Database Queries
 
