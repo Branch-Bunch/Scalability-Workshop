@@ -6,8 +6,12 @@ mongoose.Promise = Promise
 mongoose.connect(MONGODB_URI)
 console.log(`Connected to ${MONGODB_URI}`)
 
+function getValue(obj) {
+  return (obj.score / obj.value)
+}
+
 function comparison(first, second) {
-  return ((first.score / first.value) < (second.score / second.value)) ? 1 : -1
+  return (getValue(first) < getValue(second)) ? 1 : -1
 }
 
 function aggregateBadly() {
