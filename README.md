@@ -20,8 +20,17 @@ See [setup.md](https://github.com/Branch-Bunch/Scalability-Workshop/blob/master/
 
 - Lower the amount of requests made, and reduce waiting
 - Eliminate the chance of race conditions, or operating on out of date values
-- Example: Increasing a value by finding it and saving it, vs increasing a value by findbyid and update
 
+Example: Increasing a property of an object with a specific id
+
+Bad method:
+```
+Find object by id, get from database
+Modify object on the server
+Send updated object to database
+Do something after the response
+```
+<details><summary>Reveal Bad Implementation</summary>
 ```js
 Sortable.findById(id)
   .then((object) => {
@@ -30,6 +39,14 @@ Sortable.findById(id)
   })
   .then(doSomething)
 ```
+</details>
+
+<details><summary>Reveal Good method</summary>
+```
+Tell the database to increment a property of an object with specified id, and respond with the updated object
+Do something after the response
+```
+
 ```js
 Sortable.findByIdAndUpdate(
   id,
@@ -39,6 +56,7 @@ Sortable.findByIdAndUpdate(
   })
   .then(doSomething)
 ```
+</details>
 
 Things to consider:
 
