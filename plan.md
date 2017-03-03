@@ -84,18 +84,21 @@ function sort(array, funcThatDeterminesOrder) { /* hidden */ }
 
 Sortable.find({})
   .then((data) => {
-    const sorted = sort(array, getObjectValue)
+    const sorted = sort(array, getObjectValue).slice(0, 10)
     doSomething()
   })
 ```
 
 ```js
 Sortable.aggregate([
-  { $addField:
-    { $divide:
-      [ '$field', '$dateField']
-    }
-  }
+  { $project: {
+    score: '$score',
+    value: '$value',
+    popularity: { $divide: [ '$score', '$value' ] }
+  } },
+  { $sort: { popularity: -1} },
 ])
+  .limit(10)
+  .then(doSomething)
 ```
 
