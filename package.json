@@ -23,11 +23,10 @@
   "author": "Kirin Rastogi",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kirinrastogi/Scalability-Workshop/issues"
+    "url": "https://github.com/branch-bunch/Scalability-Workshop/issues"
   },
-  "homepage": "https://github.com/kirinrastogi/Scalability-Workshop#readme",
+  "homepage": "https://github.com/branch-bunch/Scalability-Workshop#readme",
   "dependencies": {
-    "dotenv": "^4.0.0",
     "mongoose": "^4.8.5"
   }
 }
