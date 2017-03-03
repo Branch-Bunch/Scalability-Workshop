@@ -3,7 +3,7 @@
 What we'll be covering:
 
 1. [Atomic Database Actions](#atomic-database-actions)
-2. [Database Queries](#database-queries)
+2. [Database Queries](#useful-database-queries)
 3. [Pagination](#pagination)
 4. [Aggregation Pipelines](#aggregation-pipelines)
 
@@ -45,7 +45,7 @@ The second snippet is better for several reasons.
 1. What happens when multiple people make a request?
 2. How many requests are made in each of them?
 
-### Database Queries
+### Useful Database Queries
 
 - Get data the way you want quickly, and efficiently
 - Do difficult operations off of the server, since the database is fast af
