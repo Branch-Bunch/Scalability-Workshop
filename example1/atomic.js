@@ -28,6 +28,3 @@ function incrementWell(id, amount) {
     .then(console.log)
     .catch(console.log)
 }
-
-incrementBadly(_id, -5)
-incrementBadly(_id, -5)
