@@ -8,7 +8,7 @@ What we'll be covering:
 4. [Aggregation Pipelines](#aggregation-pipelines)
 
 ### Setting up your environment
-See setup.md
+See [setup.md](https://github.com/Branch-Bunch/Scalability-Workshop/blob/master/setup.md)
 
 1. Download Nodejs, MongoDB
 2. Run mongod (running as root makes it easier)
