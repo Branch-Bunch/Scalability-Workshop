@@ -43,3 +43,8 @@ npm test
 ```
 - It should show you some data, and say that it works
 - If it doesn't work, make sure that ```mongod``` is running
+
+```
+npm run show
+```
+- It shows you your entire database, should be around 100 entries at this point (unless you built or populated more than once)
