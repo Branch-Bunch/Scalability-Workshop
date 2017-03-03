@@ -73,4 +73,29 @@ Again, the second snippet is better.
 
 - Get data suited for more advanced needs
 - Again, it is faster to do some operations on the database
-- Example: Sorting by a projected value on the database
+- Example: Getting the 10 most recent, highest rated items
+
+```js
+function getObjectValue(obj) {
+  return (obj.field / obj.dateField)
+}
+
+function sort(array, funcThatDeterminesOrder) { /* hidden */ }
+
+Sortable.find({})
+  .then((data) => {
+    const sorted = sort(array, getObjectValue)
+    doSomething()
+  })
+```
+
+```js
+Sortable.aggregate([
+  { $addField:
+    { $divide:
+      [ '$field', '$dateField']
+    }
+  }
+])
+```
+
