@@ -14,6 +14,7 @@ See [setup.md](https://github.com/Branch-Bunch/Scalability-Workshop/blob/master/
 2. Run mongod (running as root makes it easier)
 3. Git clone this repo
 4. ```npm run build```
+5. ```npm test```
 
 
 ### Atomic Database Actions
