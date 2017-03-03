@@ -44,7 +44,7 @@ Sortable.findById(id)
 
 <details><summary>Reveal Good method</summary>
 ```
-Tell the database to increment a property of an object with specified id, and respond with the updated object
+Tell the database to increment a certain property of object #id, and respond with the updated object
 Do something after the response
 ```
 
@@ -69,6 +69,10 @@ The second snippet is better for the reasons stated.
 
 1. Atomic actions ensure that the proper data is being modified the proper amount
 2. Finding, modifying, then saving is 2, while finding and updating on the database is just 1
+
+![Having two networking requests race can cause a race condition](/img/race-condition.png)
+
+
 </details>
 
 ### Useful Database Queries
