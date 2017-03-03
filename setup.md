@@ -1,5 +1,9 @@
 # Download Instructions
-Install MongoDB and set it up, and install node
+
+Required software:
+
+1. MongoDB version 2.4 or higher
+2. Nodejs version 7.0 or higher
 
 ### Mac OS
 ```bash 
