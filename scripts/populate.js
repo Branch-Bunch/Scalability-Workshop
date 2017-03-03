@@ -4,9 +4,9 @@ const idString = require('../config').id
 const mongoose = require('mongoose')
 const MONGODB_URI = require('../config').MONGODB_URI
 
+mongoose.Promise = Promise
 mongoose.connect(MONGODB_URI)
 console.log(`Connected to ${MONGODB_URI}`)
-mongoose.Promise = Promise
 
 function populate() {
   return new Promise((resolve, reject) => {

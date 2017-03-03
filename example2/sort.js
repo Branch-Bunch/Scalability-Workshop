@@ -3,9 +3,9 @@ const Sortable = require('../models/Sortable')
 const MONGODB_URI = require('../config').MONGODB_URI
 const _id = require('../config').id
 
+mongoose.Promise = Promise
 mongoose.connect(MONGODB_URI)
 console.log(`Connected to ${MONGODB_URI}`)
-mongoose.Promise = Promise
 
 function comparison(first, second) {
   return (first.value < second.value) ? 1 : -1
