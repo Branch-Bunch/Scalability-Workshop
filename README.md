@@ -40,10 +40,17 @@ Sortable.findByIdAndUpdate(
   .then(doSomething)
 ```
 
-The second snippet is better for several reasons.
+Things to consider:
 
 1. What happens when multiple people make a request?
 2. How many requests are made in each of them?
+
+<details><summary>Reveal Answer</summary>
+The second snippet is better for the reasons stated.
+
+1. Atomic actions ensure that the proper data is being modified the proper amount
+2. Finding, modifying, then saving is 2, while finding and updating on the database is just 1
+</details>
 
 ### Useful Database Queries
 
