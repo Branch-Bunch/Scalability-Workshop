@@ -75,28 +75,53 @@ The second snippet is better for the reasons stated.
 
 - Get data the way you want quickly, and efficiently
 - Do difficult operations off of the server, since the database is fast af
-- Example: Sorting on the database
 
-```js
-Sortable.find({})
-  .sort({ field: -1 })
-  .then(doSomething)
+Example: Getting the top 10 items sorted by a value
+
+Bad method:
+
 ```
+Get all of the items from the database
+Sort them
+Pass on the first 10 items
+Do something with them
+```
+<details><summary>Reveal Bad Implementation</summary>
 
 ```js
 function sort(array, options) { /* hidden */}
 
 Sortable.find({})
-  .then((found) => {
-    return sort(found, { field: -1 })
-  })
+  .then(found => sort(found, { field: -1 }).slice(0, 10)))
   .then(doSomething)
 ```
+</details>
 
-Again, the second snippet is better.
+<details><summary>Reveal Good method</summary>
+```
+Tell the database to give you the first 10 elements of the sorted array
+Do something with the sorted data
+```
+
+```js
+Sortable.find({})
+  .sort({ field: -1 })
+  .limit(10)
+  .then(doSomething)
+```
+</details>
+
+Things to consider:
 
 1. What happens when you sort on a server that only has one thread?
 2. Why not use the database that is optimized for this?
+
+<details><summary>Reveal Answer</summary>
+Again, the second snippet is better.
+
+1. Sorting blocks the entire process, and makes things slow
+2. Might as well use the database as it does it in a faster method.
+</details>
 
 ### Pagination
 
