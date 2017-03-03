@@ -65,7 +65,6 @@ Things to consider:
 2. How many requests are made in each of them?
 
 <details><summary>Reveal Answer</summary>
-The second snippet is better for the reasons stated.
 
 1. Atomic actions ensure that the proper data is being modified the proper amount
 2. Finding, modifying, then saving is 2, while finding and updating on the database is just 1
@@ -123,7 +122,6 @@ Things to consider:
 2. Why not use the database that is optimized for this?
 
 <details><summary>Reveal Answer</summary>
-Again, the second snippet is better.
 
 1. Sorting blocks the entire process, and makes things slow
 2. Might as well use the database as it does it in a faster method.
@@ -196,4 +194,13 @@ Memes.aggregate([
   .limit(10)
   .then(postMemes)
 ```
+</details>
+
+Things to consider:
+
+1. Is the data in the database modified?
+
+<details><summary>Reveal Answers</summary>
+1. The fields you add are temporary, so it is a good solution
+Again, sorting on the database is a good solution in this example
 </details>
