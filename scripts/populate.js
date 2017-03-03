@@ -21,7 +21,7 @@ function populate() {
 
 const _id = new ObjectId(idString)
 
-Sortable.findById({ _id }).remove().exec() // remove duplicates
+//Sortable.findById({ _id }).remove().exec() // remove duplicates
 
 Sortable.create({ value: 10, score: 5, _id })
   .then(console.log)
