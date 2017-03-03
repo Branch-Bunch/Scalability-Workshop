@@ -201,6 +201,8 @@ Things to consider:
 1. Is the data in the database modified?
 
 <details><summary>Reveal Answers</summary>
+
 1. The fields you add are temporary, so it is a good solution
+
 Again, sorting on the database is a good solution in this example
 </details>
