@@ -14,5 +14,3 @@ Sortable.create({ value: 1, score: -3})
     process.exit()
   })
   .catch(console.log)
-
-

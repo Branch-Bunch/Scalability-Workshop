@@ -9,3 +9,4 @@ mongoose.Promise = Promise
 Sortable.find({})
   .then(console.log)
   .then(process.exit)
+  .catch(console.log)

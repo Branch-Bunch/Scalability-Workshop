@@ -31,9 +31,11 @@ Sortable.create({ value: 10, score: 5, _id })
 
 const promiseArray = new Array(100)
 console.log(promiseArray.length)
+
 for (let i = 0; i < 100; i++) {
   promiseArray[i] = populate()
 }
+
 Promise.all(promiseArray)
   .then((data) => {
     console.log('populated')

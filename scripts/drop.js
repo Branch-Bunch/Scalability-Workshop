@@ -6,4 +6,7 @@ mongoose.connect(MONGODB_URI)
 console.log(`Connected to ${MONGODB_URI}`)
 mongoose.Promise = Promise
 
-Sortable.find({}).remove().exec()
+Sortable.find({})
+  .remove()
+  .then(process.exit)
+  .catch(console.log)
