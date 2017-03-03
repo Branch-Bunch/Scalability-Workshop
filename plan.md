@@ -42,6 +42,27 @@ The second snippet is better for several reasons.
 - Do difficult operations off of the server, since the database is fast af
 - Example: Sorting on the database
 
+```js
+Sortable.find({})
+  .sort({ field: -1 })
+  .then(doSomething)
+```
+
+```js
+function sort(array, options) { /* hidden */}
+
+Sortable.find({})
+  .then((found) => {
+    return sort(found, { field: -1 })
+  })
+  .then(doSomething)
+```
+
+Again, the second snippet is better.
+
+1. What happens when you sort on a server that only has one thread?
+2. Why not use the database that is optimized for this?
+
 ### Pagination
 
 - Loading the next items in a set
