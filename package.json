@@ -6,6 +6,7 @@
   "scripts": {
     "test": "node scripts/test.js",
     "start": "node example1/atomic.js",
+    "show": "node scripts/show.js",
     "build": "npm install && node scripts/populate.js"
   },
   "repository": {
