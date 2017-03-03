@@ -72,7 +72,6 @@ The second snippet is better for the reasons stated.
 
 ![Having two networking requests race can cause a race condition](/img/race-condition.png)
 
-
 </details>
 
 ### Useful Database Queries
@@ -80,7 +79,7 @@ The second snippet is better for the reasons stated.
 - Get data the way you want quickly, and efficiently
 - Do difficult operations off of the server, since the database is fast af
 
-Example: Getting the top 10 items sorted by a value
+Example: Getting the top 10 Anime betrayals from a database of Anime episodes
 
 Bad method:
 
@@ -88,16 +87,19 @@ Bad method:
 Get all of the items from the database
 Sort them
 Pass on the first 10 items
-Do something with them
+Make a video with them
 ```
 <details><summary>Reveal Bad Implementation</summary>
 
 ```js
-function sort(array, options) { /* hidden */}
+function comparison(first, second) {
+  // compare the anime episodes
+  // sort will order them all
+}
 
-Sortable.find({})
-  .then(found => sort(found, { field: -1 }).slice(0, 10)))
-  .then(doSomething)
+AnimeEpisodes.find({})
+  .then(animeArray => animeArray.sort(comparison).slice(0, 10)))
+  .then(makeVideo)
 ```
 </details>
 
@@ -108,10 +110,10 @@ Do something with the sorted data
 ```
 
 ```js
-Sortable.find({})
-  .sort({ field: -1 })
+AnimeEpisodes.find({})
+  .sort({ betrayal: -1 })
   .limit(10)
-  .then(doSomething)
+  .then(makeVideo)
 ```
 </details>
 
@@ -125,6 +127,7 @@ Again, the second snippet is better.
 
 1. Sorting blocks the entire process, and makes things slow
 2. Might as well use the database as it does it in a faster method.
+
 </details>
 
 ### Pagination
@@ -135,40 +138,62 @@ Again, the second snippet is better.
 
 ### Aggregation Pipelines
 
-- Get data suited for more advanced needs
+- Get data suited for more advanced needs.
+- Common use is when sorting by a single value isn't enough
 - Again, it is faster to do some operations on the database
-- Example: Getting the 10 most recent, highest rated items
 
+Example: Getting the 10 most dank memes, where dankness is how recent, and highly voted they are
+
+Bad method:
+
+```
+Get all memes from the database
+Sort them using a function to determine their dankness, instead of a simple property
+Pass on the first 10 memes
+Post the memes
+```
+
+<details><summary>Reveal Bad Implementation</summary>
 ```js
-function getObjectValue(obj) {
-  return (obj.field / obj.dateField)
+function getDankness(meme) {
+  // divides score by how old it is
+  return (meme.score / meme.dateField.getTime())
 }
 
-function sort(array, funcThatDeterminesOrder) { /* hidden */ }
+function comparison(first, second) {
+  // use getDankness to return 1 or -1 for sort to order the memes
+}
 
-Sortable.find({})
-  .then((data) => {
-    const sorted = sort(array, getObjectValue).slice(0, 10)
-    doSomething()
-  })
+Memes.find({})
+  .then(memesList => sort(array, getObjectValue).slice(0, 10))
+  .then(postMemes)
+```
+</details>
+
+<details><summary>Reveal Good Method</summary>
+```
+Add a temporary field to each of the memes named dankness, and calculate it
+Sort all of the memes by dankness, on the database still
+Respond to the server with the 10 dankest memes
+Post the memes
 ```
 
 ```js
-Sortable.aggregate([
+Memes.aggregate([
   {
     $project: {
       score: '$score',
       value: '$value',
-      popularity: {
+      dankness: {
         $divide: [ '$score', '$value' ]
       }
     }
   },
   { 
-    $sort: { popularity: -1} 
+    $sort: { dankness: -1} 
   },
 ])
   .limit(10)
-  .then(doSomething)
+  .then(postMemes)
 ```
-
+</details>
