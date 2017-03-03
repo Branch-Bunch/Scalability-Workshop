@@ -91,12 +91,18 @@ Sortable.find({})
 
 ```js
 Sortable.aggregate([
-  { $project: {
-    score: '$score',
-    value: '$value',
-    popularity: { $divide: [ '$score', '$value' ] }
-  } },
-  { $sort: { popularity: -1} },
+  {
+    $project: {
+      score: '$score',
+      value: '$value',
+      popularity: {
+        $divide: [ '$score', '$value' ]
+      }
+    }
+  },
+  { 
+    $sort: { popularity: -1} 
+  },
 ])
   .limit(10)
   .then(doSomething)
