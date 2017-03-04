@@ -203,7 +203,7 @@ function comparison(first, second) {
 }
 
 Memes.find({})
-  .then(memesList => sort(array, getObjectValue).slice(0, 10))
+  .then(memesList => memesList.sort(comparison).slice(0, 10))
   .then(postMemes)
 ```
 </details>
