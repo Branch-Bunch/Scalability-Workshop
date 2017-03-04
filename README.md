@@ -130,9 +130,32 @@ Things to consider:
 
 ### Pagination
 
-- Loading the next items in a set
+- Loading items in a set by index
 - There are multiple ways to do this: Skipping, and Ranged Queries
-- Example: Loading by date
+- There are tradeoffs between both methods
+
+Example: Loading next items by date, newest posts
+
+Skipping through:
+
+```
+Load all of the items
+Skip through the items, and load all of the ones along the way
+Pass them on to the server
+Do something
+```
+
+<details><summary>Reveal Skipping Implementation</summary>
+
+```js
+  Sortable.find({})
+    .skip(10)
+    .limit(10)
+    .then(console.log)
+    .catch(console.log)
+```
+
+</details>
 
 ### Aggregation Pipelines
 
