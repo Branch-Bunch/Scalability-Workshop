@@ -7,7 +7,9 @@ mongoose.connect(MONGODB_URI)
 console.log(`Connected to ${MONGODB_URI}`)
 
 function rangeAndLimit() {
-  Sortable.find({ createdAt: { $lte: (new Date('2017/03/15').getTime()) } })
+  Sortable.find({ createdAt:
+    { $lte: (new Date('2017/03/15').getTime()) } 
+  })
     .limit(10)
     .then(console.log)
     .catch(console.log)

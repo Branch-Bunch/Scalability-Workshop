@@ -25,7 +25,7 @@ const _id = new ObjectId(idString)
 
 //Sortable.findById({ _id }).remove().exec() // remove duplicates
 
-Sortable.create({ value: 10, score: 5, _id })
+Sortable.create({ value: 10, score: 5, _id, createdAt: (new Date('2017/03/15').getTime()) })
   .then(console.log)
   .catch((err) => {
     console.log(`Don't run this multiple times`)
