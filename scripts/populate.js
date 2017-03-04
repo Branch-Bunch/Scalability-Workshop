@@ -10,7 +10,8 @@ console.log(`Connected to ${MONGODB_URI}`)
 
 function populate() {
   return new Promise((resolve, reject) => {
-    const value = Math.floor(Math.random() * 100)
+    let value = Math.floor(Math.random() * 100)
+    if (!value) value++
     const sign = (Math.random() >= 0.5) ? 1 : -1
     const score = Math.floor(value * Math.random() * sign)
     Sortable.create({ value, score })
