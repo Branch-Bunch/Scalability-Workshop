@@ -56,3 +56,9 @@ Congrats! Your environment is working. Use the following command to run the exam
 npm run i
 ```
 Where 'i' is the example #, from 1 to 4 (inclusive).
+
+If you ever need to reset your database, use 
+
+```
+npm run reset
+```
