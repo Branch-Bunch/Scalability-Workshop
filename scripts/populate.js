@@ -13,7 +13,9 @@ function populate() {
     const value = Math.ceil(Math.random() * 100)
     const sign = (Math.random() >= 0.5) ? 1 : -1
     const score = Math.floor(value * Math.random() * sign)
-    Sortable.create({ value, score })
+    const day = Math.ceil(Math.random() * 30)
+    const createdAt = (new Date(`2017/03/${day}`)).getTime()
+    Sortable.create({ value, score, createdAt })
       .then(resolve)
       .catch(reject)
   })

@@ -7,6 +7,7 @@ mongoose.connect(MONGODB_URI)
 console.log(`Connected to ${MONGODB_URI}`)
 
 Sortable.find({})
+  .sort({ createdAt: -1 })
   .then(console.log)
   .then(process.exit)
   .catch(console.log)
