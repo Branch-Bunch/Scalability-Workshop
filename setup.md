@@ -48,3 +48,11 @@ npm test
 npm run show
 ```
 - It shows you your entire database, should be around 100 entries at this point (unless you built or populated more than once)
+
+# All done!
+Congrats! Your environment is working. Use the following command to run the examples:
+
+```bash
+npm run i
+```
+Where 'i' is the example #, from 1 to 4 (inclusive).
