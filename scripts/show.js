@@ -6,8 +6,10 @@ mongoose.Promise = Promise
 mongoose.connect(MONGODB_URI)
 console.log(`Connected to ${MONGODB_URI}`)
 
+const sortParams = { createdAt: -1 }  // sort by newest date
+
 Sortable.find({})
-  .sort({ createdAt: -1 })
+  .sort(sortParams)
   .then(console.log)
   .then(process.exit)
   .catch(console.log)

@@ -8,6 +8,7 @@
     "start": "node example1/atomic.js",
     "show": "node scripts/show.js",
     "build": "npm install && node scripts/populate.js",
+    "reset": "node scripts/drop.js && node scripts/populate.js",
     "1": "node example1/atomic.js",
     "2": "node example2/sort.js",
     "3": "node example3/pagination.js",
