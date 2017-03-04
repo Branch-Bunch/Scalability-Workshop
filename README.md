@@ -151,8 +151,25 @@ Do something
   Sortable.find({})
     .skip(10)
     .limit(10)
-    .then(console.log)
-    .catch(console.log)
+    .then(doSomething)
+```
+
+</details>
+
+<details><summary>Reveal Range Method</summary>
+
+```
+Load only the items that match the range
+Pass them on to the server
+Do Something
+```
+
+```
+  Sortable.find({ createdAt:
+    { $lte: 'theLastDateShown' }
+    })
+    .limit(10)
+    .then(doSomething)
 ```
 
 </details>
