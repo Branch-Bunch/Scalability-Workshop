@@ -1,0 +1,35 @@
+- This talk is a general talk about server - database interactions
+- I am using NoSQL, but all of the examples also apply to SQL. So no joins
+- I'm using Nodejs as a runtime, the implementation of the code does not matter.
+
+- In all of the examples, I will show a bad or common method, talk about it, and then a better method
+
+- Atomic:
+  - Bad implementation
+  - Bad code
+  - Call good code
+  - Show badness
+  - Solution is atomicism
+  - Show goodness, no atomicism
+  - Works
+  - Ask questions
+  - Answer & show pic
+
+- Sort
+  - It depends on your architecture
+  - Sort on datbase if you can, especially with node
+  - Bad algorithm
+  - Bad code
+  - Depends on architecture, node is single threaded, and it blocks
+  - Good algorithm
+  - Good code
+  - Ask questions
+
+
+- Aggregate
+  - Similar to sorting, depends
+  - This is for advanced sorting, flexible sorting
+  - Bad algorithm
+  - Bad code
+  - Very flexible sorting on db is so useful
+  - Questions/ statements
