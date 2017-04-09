@@ -43,6 +43,7 @@ Sortable.findById(id)
 </details>
 
 <details><summary>Reveal Good method</summary>
+
 ```
 Tell the database to increment a certain property of object #id, and respond with the updated object
 Do something after the response
@@ -88,6 +89,7 @@ Sort them
 Pass on the first 10 items
 Make a video with them
 ```
+
 <details><summary>Reveal Bad Implementation</summary>
 
 ```js
@@ -100,9 +102,11 @@ AnimeEpisodes.find({})
   .then(animeArray => animeArray.sort(comparison).slice(0, 10)))
   .then(makeVideo)
 ```
+
 </details>
 
 <details><summary>Reveal Good method</summary>
+
 ```
 Tell the database to give you the first 10 elements of the sorted array
 Do something with the sorted data
@@ -114,6 +118,7 @@ AnimeEpisodes.find({})
   .limit(10)
   .then(makeVideo)
 ```
+
 </details>
 
 Things to consider:
@@ -192,6 +197,7 @@ Post the memes
 ```
 
 <details><summary>Reveal Bad Implementation</summary>
+
 ```js
 function getDankness(meme) {
   // divides score by how old it is
@@ -206,9 +212,11 @@ Memes.find({})
   .then(memesList => memesList.sort(comparison).slice(0, 10))
   .then(postMemes)
 ```
+
 </details>
 
 <details><summary>Reveal Good Method</summary>
+
 ```
 Add a temporary field to each of the memes named dankness, and calculate it
 Sort all of the memes by dankness, on the database still
@@ -234,6 +242,7 @@ Memes.aggregate([
   .limit(10)
   .then(postMemes)
 ```
+
 </details>
 
 Things to consider:
