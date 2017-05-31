@@ -25,6 +25,7 @@ See [setup.md](https://github.com/Branch-Bunch/Scalability-Workshop/blob/master/
 Example: Increasing a property of an object with a specific id
 
 Bad method:
+
 ```
 Find object by id, get from database
 Modify object on the server
@@ -32,6 +33,7 @@ Send updated object to database
 Do something after the response
 ```
 <details><summary>Reveal Bad Implementation</summary>
+
 ```js
 Sortable.findById(id)
   .then((object) => {
